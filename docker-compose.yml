@@ -24,17 +24,17 @@ services:
       MYSQL_PASSWORD: "test"
       MYSQL_DATABASE: "test"
 
-  # mariadb
-  mariadb:
-    image: "mariadb:10.4.8"
-    container_name: "typeorm-mariadb"
-    ports:
-      - "3307:3306"
-    environment:
-      MYSQL_ROOT_PASSWORD: "admin"
-      MYSQL_USER: "test"
-      MYSQL_PASSWORD: "test"
-      MYSQL_DATABASE: "test"
+  # # mariadb
+  # mariadb:
+  #   image: "mariadb:10.4.8"
+  #   container_name: "typeorm-mariadb"
+  #   ports:
+  #     - "3307:3306"
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: "admin"
+  #     MYSQL_USER: "test"
+  #     MYSQL_PASSWORD: "test"
+  #     MYSQL_DATABASE: "test"
 
   # postgres
   postgres:
@@ -50,15 +50,16 @@ services:
       POSTGRES_PASSWORD: "test"
       POSTGRES_DB: "test"
 
-  # mssql
-  mssql:
-    image: "mcr.microsoft.com/mssql/server:2017-latest-ubuntu"
-    container_name: "typeorm-mssql"
-    ports:
-      - "1433:1433"
-    environment:
-      SA_PASSWORD: "Admin12345"
-      ACCEPT_EULA: "Y"
+#   # mssql
+#   mssql:
+#     image: "mcr.microsoft.com/mssql/server:2017-latest-ubuntu"
+#     container_name: "typeorm-mssql"
+#     ports:
+#       - "1433:1433"
+#     environment:
+#       SA_PASSWORD: "Admin12345"
+#       ACCEPT_EULA: "Y"
+
 
   # cockroachdb
   cockroachdb:
@@ -102,17 +103,18 @@ services:
   #     - 1128-1129:1128-1129
   #     - 59013-59014:59013-59014
 
-  # mongodb
-  mongodb:
-    image: "mongo:3.4.18"
-    container_name: "typeorm-mongodb"
-    ports:
-      - "27017:27017"
-  # redis
-  # redis:
-  #   image: "redis:3.0.3"
-  #   container_name: "typeorm-redis"
-  #   ports:
-  #     - "6379:6379"
-#volumes:
-#  volume-hana-xe:
+
+#   # mongodb
+#   mongodb:
+#     image: "mongo:3.4.18"
+#     container_name: "typeorm-mongodb"
+#     ports:
+#       - "27017:27017"
+#   # redis
+#   # redis:
+#   #   image: "redis:3.0.3"
+#   #   container_name: "typeorm-redis"
+#   #   ports:
+#   #     - "6379:6379"
+# #volumes:
+# #  volume-hana-xe:
