@@ -9,6 +9,9 @@
     "name": "Umed Khudoiberdiev",
     "email": "pleerock.me@gmail.com"
   },
+  "publishConfig": {
+    "registry": "registry=https://npm.pkg.github.com/bfoese"
+  },
   "main": "./index.js",
   "browser": {
     "./browser/driver/aurora-data-api/AuroraDataApiDriver.js": "./browser/platform/BrowserDisabledDriversDummy.js",
@@ -34,7 +37,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/typeorm/typeorm.git"
+    "url": "https://github.com/bfoese/typeorm.git",
+    "directory": "packages/typeorm"
   },
   "bugs": {
     "url": "https://github.com/typeorm/typeorm/issues"
@@ -146,7 +150,8 @@
     "watch": "./node_modules/.bin/tsc -w",
     "package": "gulp package",
     "lint": "eslint -c ./.eslintrc.js src/**/*.ts test/**/*.ts sample/**/*.ts",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 2"
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 2",
+    "release": "npm run package && cd build/package && npm publish"
   },
   "bin": {
     "typeorm": "./cli.js"
